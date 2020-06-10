@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">RetrofitStudyApp</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="email">email</string>
+    <string name="password">password</string>
+    <string name="name">name</string>
+    <string name="school">school</string>
 </resources>
