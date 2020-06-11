@@ -1,4 +1,4 @@
-package company.domain.retrofitstudyapp
+package company.domain.retrofitstudyapp.api
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -11,7 +11,8 @@ class RetrofitClient {
         @get:Synchronized
         val instance: RetrofitClient?
             get() {
-                if (mInstance == null) mInstance = RetrofitClient()
+                if (mInstance == null) mInstance =
+                    RetrofitClient()
 
                 return mInstance
 
