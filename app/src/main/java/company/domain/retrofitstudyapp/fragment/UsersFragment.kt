@@ -29,17 +29,17 @@ class UsersFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        recyclerView.layoutManager = LinearLayoutManager(context)
+        recyclerView.layoutManager = LinearLayoutManager(activity)
+        recyclerView.setHasFixedSize(true)
 
         val call: Call<UserResponse>? = RetrofitClient.instance?.api?.getUsers()
 
         call?.enqueue(object : Callback<UserResponse> {
             override fun onResponse(call: Call<UserResponse>, response: Response<UserResponse>) {
-                val userList = response.body()?.user!!
-                val adapter = UserAdapter(context, userList)
+                val userList = response.body()?.user
 
-                Log.d("Test", "$userList")
-                Log.d("Test", "$adapter")
+                Log.d("Log", userList.toString())
+                val adapter = UserAdapter(activity, userList!!)
 
                 recyclerView.adapter = adapter
 

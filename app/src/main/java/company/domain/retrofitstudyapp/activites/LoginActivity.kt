@@ -59,7 +59,7 @@ class LoginActivity : AppCompatActivity() {
 
         }
 
-        if (Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+        if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
             editTextEmail.error = "Enter a valid email."
             editTextEmail.requestFocus()
             return

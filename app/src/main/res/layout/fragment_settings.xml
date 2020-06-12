@@ -1,63 +1,130 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <TableLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp">
+        android:orientation="vertical"
+        android:padding="10dp">
 
-        <TableRow>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Update Profile"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:text="@string/email"
-                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
+        <EditText
+            android:id="@+id/editTextEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_email"
+            android:drawablePadding="5dp"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress" />
 
-            <TextView
-                android:id="@+id/textViewEmail"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
+        <EditText
+            android:id="@+id/editTextName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_name"
+            android:drawablePadding="5dp"
+            android:hint="@string/name"
+            android:inputType="textPersonName" />
 
-        </TableRow>
+        <EditText
+            android:id="@+id/editTextSchool"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_school"
+            android:drawablePadding="5dp"
+            android:hint="@string/school"
+            android:inputType="text" />
 
-        <TableRow>
+        <Button
+            android:id="@+id/buttonSave"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/colorPrimaryDark"
+            android:text="Save "
+            android:textAllCaps="false"
+            android:textColor="@color/colorFormBackground" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:text="@string/name"
-                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorPrimaryDark" />
 
-            <TextView
-                android:id="@+id/textViewName"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/change_password"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
 
-        </TableRow>
+        <EditText
+            android:id="@+id/editTextCurrentPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_password"
+            android:drawablePadding="5dp"
+            android:hint="current password"
+            android:inputType="textPassword" />
 
-        <TableRow>
+        <EditText
+            android:id="@+id/editTextNewPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_password"
+            android:drawablePadding="5dp"
+            android:hint="new password"
+            android:inputType="textPassword" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:text="@string/school"
-                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
 
-            <TextView
-                android:id="@+id/textViewSchool"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
+        <Button
+            android:id="@+id/buttonChangePassword"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/colorPrimaryDark"
+            android:text="@string/change_password"
+            android:textAllCaps="false"
+            android:textColor="@color/colorFormBackground" />
 
-        </TableRow>
-    </TableLayout>
-</LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorPrimaryDark" />
+
+
+        <Button
+            android:id="@+id/buttonLogout"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/colorPrimaryDark"
+            android:text="Logout"
+            android:textAllCaps="false"
+            android:textColor="@color/colorFormBackground" />
+
+
+        <Button
+            android:id="@+id/buttonDelete"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:background="#d10000"
+            android:text="Delete Profile"
+            android:textAllCaps="false"
+            android:textColor="@color/colorFormBackground" />
+
+    </LinearLayout>
+</ScrollView>
